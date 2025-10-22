@@ -1,0 +1,16 @@
+# Mapeamento de Pinos para o projeto Ponte UART->GPIO
+
+# Clock de entrada da placa (25MHz)
+LOCATE COMP "clk" SITE "P3";
+IOBUF PORT "clk" IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk" 25.0 MHz;
+
+# Entrada UART (RX) - conectada ao TX da BitDogLab #1
+# Usando o pino 92 do conector (H16) como exemplo
+LOCATE COMP "uart_rx" SITE "H16";
+IOBUF PORT "uart_rx" IO_TYPE=LVCMOS33;
+
+# Saída para o LED (GPIO) - conectada à entrada da BitDogLab #2
+# Usando o pino 89 do conector (J20)
+LOCATE COMP "led_out" SITE "J20";
+IOBUF PORT "led_out" IO_TYPE=LVCMOS33;
