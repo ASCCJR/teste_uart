@@ -16,7 +16,10 @@
 // --- Configurações da UART ---
 #define UART_ID      uart0
 #define BAUD_RATE    9600
-#define UART_TX_PIN  0
+#define UART_TX_PIN  0 // No Conector I2C0: Este é um conector de 4 pinos.
+// O GPIO0 é o pino rotulado como SDA neste conector. 
+// Embora o rótulo seja "SDA" (usado para o protocolo I2C), o pino é fisicamente o GPIO0, e nós o configuramos 
+// em nosso código C para funcionar como uma saída UART.
 #define UART_RX_PIN  1 // Não usado, mas bom definir
 
 // --- Configurações dos Botões ---
