@@ -52,7 +52,7 @@ A implementação atual permite que o FPGA compreenda o protocolo UART enviado p
 
 ---
 
-## 🗺️ Roadmap - Próximos Passos
+## Roadmap - Próximos Passos
 
 O próximo grande passo é migrar a comunicação de UART para I2C.
 
