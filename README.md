@@ -4,7 +4,7 @@
 ![FPGA](https://img.shields.io/badge/FPGA-Colorlight%20i9-blue)
 ![Protocolo](https://img.shields.io/badge/Protocolo-UART-green)
 
-## 📝 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto demonstra a implementação de uma ponte de protocolo (*Protocol Bridge*) utilizando um FPGA Colorlight i9. O objetivo é servir como um exemplo fundamental de como FPGAs podem ser usados para "traduzir" sinais entre diferentes interfaces de comunicação em hardware.
 
@@ -15,7 +15,7 @@ O sistema é composto por três componentes principais:
 
 ---
 
-## 🚀 Como Funciona
+## Como Funciona
 
 O fluxo de comunicação ocorre da seguinte maneira:
 
@@ -30,7 +30,7 @@ O fluxo de comunicação ocorre da seguinte maneira:
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 .
@@ -44,9 +44,9 @@ O fluxo de comunicação ocorre da seguinte maneira:
 
 ---
 
-## 🛠️ Status Atual
+## Status Atual
 
-**✅ Parte 1 - Implementação UART**
+** Parte 1 - Implementação UART**
 
 A implementação atual permite que o FPGA compreenda o protocolo UART enviado pela **BitDogLab #1**. Com isso, o FPGA agora possui uma interface de recepção UART funcional.
 
@@ -68,9 +68,9 @@ O próximo grande passo é migrar a comunicação de UART para I2C.
 
 | Aspecto | Detalhes |
 | :--- | :--- |
-| **💻 Novo Código** | Programa em C usando a biblioteca I2C do Pico SDK. |
-| **🔌 Novas Conexões** | • **SDA** (dados) → GP0 do conector I2C0<br>• **SCL** (clock) → GP1 do conector I2C0 |
-| **📡 Novo Comando** | Em vez de enviar '''1''' via UART, enviará um comando I2C.<br>📨 Exemplo: `"Dispositivo 0x42, receba: 0x01"` |
+| **Novo Código** | Programa em C usando a biblioteca I2C do Pico SDK. |
+| **Novas Conexões** | • **SDA** (dados) → GP0 do conector I2C0<br>• **SCL** (clock) → GP1 do conector I2C0 |
+| **Novo Comando** | Em vez de enviar '''1''' via UART, enviará um comando I2C.<br>📨 Exemplo: `"Dispositivo 0x42, receba: 0x01"` |
 
 ### 2. FPGA (A Ponte)
 
