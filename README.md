@@ -28,7 +28,7 @@ Este projeto é um exemplo fundamental de como FPGAs podem ser usados para "trad
 
 ## Status Atual
 
-✅ **Parte 1 - Implementação UART**
+**Parte 1 - Implementação UART**
 
 Se der certo, então conseguimos "ensinar" o FPGA a entender o protocolo UART vindo da BitDogLab #1. Portanto, o FPGA agora possui uma interface de recepção UART funcional.
 
@@ -42,17 +42,17 @@ Se der certo, então conseguimos "ensinar" o FPGA a entender o protocolo UART vi
 [BitDogLab #1] --- (Protocolo I2C) ---> [FPGA] --- (Protocolo GPIO) ---> [BitDogLab #2]
 ```
 
-### 1. BitDogLab #1 (O Transmissor)
+### 1️⃣ BitDogLab #1 (O Transmissor)
 
-**Novo Papel**: Mestre I2C (em vez de transmissor UART)
+**🔄 Novo Papel**: Mestre I2C (em vez de transmissor UART)
 
-**Mudanças Necessárias**:
-- **Novo Código**: Programa em C usando a biblioteca I2C do Pico SDK
-- **Novas Conexões**: Dois pinos para comunicação com o FPGA
-  - SDA (dados) - ex: GP0 do conector I2C0
-  - SCL (clock) - ex: GP1 do conector I2C0
-- **Novo Comando**: Em vez de enviar '1' via UART, envia comando I2C
-  - Exemplo: "Dispositivo 0x42, receba: 0x01"
+#### 📝 Mudanças Necessárias
+
+| Aspecto | Detalhes |
+|---------|----------|
+| **💻 Novo Código** | Programa em C usando a biblioteca I2C do Pico SDK |
+| **🔌 Novas Conexões** | • **SDA** (dados) → GP0 do conector I2C0<br>• **SCL** (clock) → GP1 do conector I2C0 |
+| **📡 Novo Comando** | Em vez de enviar `'1'` via UART, envia comando I2C<br>📨 Exemplo: `"Dispositivo 0x42, receba: 0x01"` |
 
 ### 2. FPGA (A Ponte)
 
